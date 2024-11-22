@@ -309,6 +309,10 @@ public class TrustPilotMD5 {
 	 * Final note: 
 	 * The comments in this method are copied over and as such are contextual to coin change. Remember that the ideas discussed still apply, even though the 
 	 * subject of this method's comments is that of coins.
+	 * 
+	 * New final note:
+	 * Just to correct myself, this isnt actually exactly coinchange. Its related, sure, but in the normal coin change, its only about the amount of variations, not the variations themselves.
+	 * But ill keep calling it coin change anyway because i cant be bothered.
 	 */
 	private static ArrayList<int[]> CoinChange(int amount,int[] coins,Predicate<Integer> countConstriction) {
 		//initialize stuff
