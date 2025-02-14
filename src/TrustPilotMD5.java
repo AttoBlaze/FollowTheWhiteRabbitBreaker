@@ -94,7 +94,8 @@ public class TrustPilotMD5 {
 		
 		//get anagram factorization
 		anagramFactorization = GetFactorization(anagramCharList);
-		  
+		System.out.println(anagramFactorization); 
+		
 		//read words file to find possible anagram words
 		startTime = System.nanoTime();
 		ReadWordFile();
@@ -312,7 +313,7 @@ public class TrustPilotMD5 {
 	 * 
 	 * New final note:
 	 * Just to correct myself, this isnt actually exactly coinchange. Its related, sure, but in the normal coin change, its only about the amount of variations, not the variations themselves.
-	 * But ill keep calling it coin change anyway because i cant be bothered.
+	 * But ill keep calling it coin change anyway because i cant be bothered anyway.
 	 */
 	private static ArrayList<int[]> CoinChange(int amount,int[] coins,Predicate<Integer> countConstriction) {
 		//initialize stuff
@@ -501,7 +502,9 @@ public class TrustPilotMD5 {
 	//this is just Heap's algorithm to keep stuff dynamic (which was the initial goal)
 	private static void GetPermutationsOfMatch(HashSet<String> matches) {
 		int i;
-		for (String match: matches) {
+		String[] MATCHES = new String[matches.size()];
+		matches.toArray(MATCHES);
+		for (String match: MATCHES) {
 			String[] words = match.split(" ");
 			
 			//get all permutations of combinations of words
